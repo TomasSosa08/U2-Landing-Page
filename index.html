@@ -1,160 +1,458 @@
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlayStation 5 - Tienda Online</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tech Store: tecnología, gaming y accesorios.">
+  <title>Tech Store | Tecnología sin límites</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <!-- 1. ENCABEZADO -->
-    <header>
-        <h1>TECH STORE</h1>
+  <div class="announcement">
+    ENVÍOS GRATIS EN COMPRAS SUPERIORES A $150.000
+    <span class="announcement-divider">|</span>
+    TECNOLOGÍA DE ÚLTIMA GENERACIÓN
+  </div>
 
-        <form>
-            <input type="search" placeholder="Buscar productos...">
-            <button type="submit">Buscar</button>
-        </form>
+  <header class="header" id="inicio">
+    <a href="#inicio" class="logo">TECH<span>STORE.</span></a>
 
-        <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Productos</a>
-            <a href="#">Ofertas</a>
-            <a href="#">Contacto</a>
-        </nav>
-    </header>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
 
-    <main>
+    <nav class="nav" id="navLinks">
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#caracteristicas">Tecnología</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
 
-        <!-- 2. PRESENTACIÓN DEL PRODUCTO -->
-        <section>
-            <h2>PlayStation 5 Slim 1TB</h2>
+    <div class="header-actions">
+      <button class="cart-button" id="openCart" aria-label="Abrir carrito">
+        <span class="cart-icon">🛒</span>
+        <span>Carrito</span>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
 
-            <figure>
-                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_600358-MLA99951902509_112025-F.webp"
-     alt="Consola PlayStation 5">
-                <figcaption>PlayStation 5 Slim edición estándar</figcaption>
-            </figure>
+  <main>
 
-            <p>Estado: Nuevo</p>
-            <p>Marca: Sony</p>
-            <p>Disponibilidad: En stock</p>
-        </section>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-background"></div>
 
-        <!-- 3. MÓDULO DE COMPRA -->
-        <section>
-            <h2>Precio y medios de pago</h2>
+      <div class="hero-content reveal">
+        <div class="eyebrow">
+          <span class="status-dot"></span>
+          NUEVA GENERACIÓN GAMING
+        </div>
 
-            <p><del>$1.200.000</del></p>
-            <p><strong>Oferta: $999.999</strong></p>
-            <p>16% de descuento</p>
+        <h1>El futuro del gaming está <span>acá.</span></h1>
 
-            <p>12 cuotas de $83.333</p>
-            <p>Aceptamos tarjetas de crédito, débito y transferencia.</p>
+        <p class="hero-description">
+          Descubrí una nueva forma de jugar. Tecnología de última
+          generación, rendimiento extraordinario y experiencias
+          que van más allá de lo convencional.
+        </p>
 
-            <button>Comprar ahora</button>
-            <button>Agregar al carrito</button>
-        </section>
+        <div class="hero-price">
+          <span class="old-price">$1.200.000</span>
+          <div class="price-line">
+            <strong>$999.999</strong>
+            <span class="discount">17% OFF</span>
+          </div>
+          <span class="installments">Hasta 6 cuotas disponibles</span>
+        </div>
 
-        
-        <section>
-            <h2>Características del producto</h2>
+        <div class="hero-buttons">
+          <a href="#productos" class="button button-primary">
+            Descubrir producto <span>→</span>
+          </a>
+          <a href="#caracteristicas" class="button button-secondary">
+            Explorar tecnología
+          </a>
+        </div>
 
-            <details>
-                <summary>Ver ficha técnica</summary>
+        <div class="hero-trust">
+          <div>
+            <strong>4K</strong>
+            <span>Resolución</span>
+          </div>
+          <div>
+            <strong>120 FPS</strong>
+            <span>Rendimiento</span>
+          </div>
+          <div>
+            <strong>1 TB</strong>
+            <span>Almacenamiento</span>
+          </div>
+        </div>
+      </div>
 
-                <ul>
-                    <li>Marca: Sony</li>
-                    <li>Modelo: PlayStation 5 Slim</li>
-                    <li>Almacenamiento: 1 TB SSD</li>
-                    <li>Resolución: hasta 4K</li>
-                    <li>Conectividad: Wi-Fi y Bluetooth</li>
-                    <li>Incluye control DualSense</li>
-                </ul>
-            </details>
+      <div class="hero-image-wrap reveal">
+        <div class="image-glow"></div>
+        <div class="hero-image-label">PLAYSTATION <span>5</span> / SLIM</div>
 
-            <h3>Descripción</h3>
+        <img
+          class="hero-image"
+          src="https://http2.mlstatic.com/D_NQ_NP_2X_600358-MLA99951902509_112025-F.webp"
+          alt="Consola PlayStation 5 Slim"
+        >
 
-            <p>
-                La PlayStation 5 Slim ofrece una experiencia de
-                videojuegos de nueva generación. Cuenta con gráficos
-                de alta calidad, tiempos de carga rápidos y un control
-                DualSense que permite sentir diferentes sensaciones
-                durante los juegos.
-            </p>
-        </section>
+        <div class="floating-card">
+          <span class="floating-icon">✦</span>
+          <div>
+            <strong>Next Generation</strong>
+            <small>Gaming experience</small>
+          </div>
+        </div>
+      </div>
 
-        <!-- 5. OPINIONES DE LOS USUARIOS -->
-        <section>
-            <h2>Opiniones de los compradores</h2>
+      <div class="hero-scroll">SCROLL TO EXPLORE <span>↓</span></div>
+    </section>
 
-            <article>
-               
-                <h3>Juan Pérez</h3>
-                <time datetime="2026-10-15">15 de octubre de 2026</time>
-                <p>Excelente consola. Los gráficos son increíbles y funciona perfectamente.</p>
-            </article>
+    <!-- BENEFICIOS -->
+    <section class="benefits">
+      <div class="benefit">
+        <span class="benefit-icon">🚚</span>
+        <div>
+          <strong>Envíos rápidos</strong>
+          <small>Recibí tu compra en casa</small>
+        </div>
+      </div>
 
-            <article>
-               
-                <h3>María López</h3>
-                <time datetime="2026-10-20">20 de octubre de 2026</time>
-                <p>Muy buena compra. Llegó rápido y en perfectas condiciones.</p>
-            </article>
+      <div class="benefit">
+        <span class="benefit-icon">🔒</span>
+        <div>
+          <strong>Compra segura</strong>
+          <small>Pagos protegidos</small>
+        </div>
+      </div>
 
-        </section>
+      <div class="benefit">
+        <span class="benefit-icon">💳</span>
+        <div>
+          <strong>Financiación</strong>
+          <small>Cuotas disponibles</small>
+        </div>
+      </div>
 
-        
-        <aside>
-            <h2>Productos relacionados</h2>
+      <div class="benefit">
+        <span class="benefit-icon">✦</span>
+        <div>
+          <strong>Calidad premium</strong>
+          <small>Productos seleccionados</small>
+        </div>
+      </div>
+    </section>
 
-            <article>
-                <h3>Joystick DualSense</h3>
-                <img src="https://cetrogar.vtexassets.com/arquivos/ids/156278-1440-auto/Joystick-Sony-PS5-Dualsense-Sterling-Silver.webp?v=639137723297300000&quality=8">
-                <p>$120.000</p>
-            </article>
+    <!-- PRODUCTO DESTACADO -->
+    <section class="section-padding" id="productos">
+      <div class="section-heading reveal">
+        <div>
+          <span class="section-kicker">01 / PRODUCTO DESTACADO</span>
+          <h2>Diseñada para <span>jugar.</span></h2>
+        </div>
+        <p>Una consola. Infinitas posibilidades. Descubrí una experiencia de juego diferente.</p>
+      </div>
 
-            <article>
-                <h3>Auriculares Gaming</h3>
-                <img src="https://i.blogs.es/25be06/auricularesjugonesap/1366_2000.jpg">
-                <p>$85.000</p>
-            </article>
-        </aside>
+      <div class="featured-product reveal">
+        <div class="featured-image">
+          <div class="featured-image-glow"></div>
+          <span class="product-tag">BEST SELLER</span>
+          <img
+            src="https://http2.mlstatic.com/D_NQ_NP_2X_600358-MLA99951902509_112025-F.webp"
+            alt="PlayStation 5 Slim 1TB"
+          >
+        </div>
 
-    </main>
+        <div class="featured-info">
+          <div class="rating">★★★★★ <span>4.9 / 5</span></div>
+          <h3>PlayStation 5 Slim</h3>
+          <span class="product-subtitle">1TB SSD · Edición Slim</span>
 
-    <!-- 7. PIE DE PÁGINA -->
-    <footer>
-        <h2>TECH STORE</h2>
+          <p class="product-description">
+            Viví tus juegos favoritos con gráficos increíbles,
+            tiempos de carga ultrarrápidos y una experiencia
+            inmersiva gracias a la tecnología de nueva generación.
+          </p>
 
-        <section>
-            <h3>Contacto</h3>
-            <p>Email: contacto@techstore.com</p>
-            <p>Teléfono: 11-1234-5678</p>
-        </section>
+          <div class="stock">
+            <span></span> Disponible para comprar
+          </div>
 
-        <section>
-            <h3>Ayuda</h3>
-            <a href="#">Preguntas frecuentes</a>
-            <a href="#">Envíos</a>
-            <a href="#">Devoluciones</a>
-        </section>
+          <div class="featured-price">
+            <small>Precio especial</small>
+            <div>
+              <strong>$999.999</strong>
+              <span class="discount">17% OFF</span>
+            </div>
+            <small class="old-price">$1.200.000</small>
+          </div>
 
-        <section>
-            <h3>Medios de pago</h3>
-            <p>Visa, Mastercard y Mercado Pago.</p>
-        </section>
+          <div class="purchase-actions">
+            <button class="button button-primary add-to-cart"
+              data-name="PlayStation 5 Slim 1TB" data-price="999999">
+              Agregar al carrito →
+            </button>
+            <a href="#especificaciones" class="button button-secondary">
+              Ver detalles
+            </a>
+          </div>
 
-        <section>
-            <h3>Garantía</h3>
-            <p>Todos nuestros productos cuentan con garantía oficial.</p>
-        </section>
+          <p class="payment-note">🔒 Compra segura · Garantía incluida</p>
+        </div>
+      </div>
+    </section>
 
-        <p>© 2026 TECH STORE. Todos los derechos reservados.</p>
-    </footer>
+    <!-- TECNOLOGÍA -->
+    <section class="specs-section section-padding" id="caracteristicas">
+      <div class="section-heading centered reveal">
+        <div>
+          <span class="section-kicker">02 / INNOVACIÓN</span>
+          <h2>Potencia en cada <span>detalle.</span></h2>
+        </div>
+        <p>Tecnología pensada para llevar tu experiencia al siguiente nivel.</p>
+      </div>
+
+      <div class="specs-grid">
+        <article class="spec-card reveal">
+          <span class="spec-number">01 — PERFORMANCE</span>
+          <div class="spec-icon">⚡</div>
+          <h3>Velocidad extrema</h3>
+          <p>Un SSD de alta velocidad para reducir los tiempos de carga y entrar directamente en acción.</p>
+        </article>
+
+        <article class="spec-card reveal">
+          <span class="spec-number">02 — IMMERSION</span>
+          <div class="spec-icon">🎮</div>
+          <h3>Control total</h3>
+          <p>La tecnología DualSense ofrece respuesta háptica y gatillos adaptativos.</p>
+        </article>
+
+        <article class="spec-card reveal">
+          <span class="spec-number">03 — VISUALS</span>
+          <div class="spec-icon">▣</div>
+          <h3>Gráficos increíbles</h3>
+          <p>Disfrutá de imágenes detalladas y resolución 4K en juegos compatibles.</p>
+        </article>
+
+        <article class="spec-card reveal">
+          <span class="spec-number">04 — SOUND</span>
+          <div class="spec-icon">♫</div>
+          <h3>Audio inmersivo</h3>
+          <p>Una experiencia sonora envolvente para sentirte dentro de cada juego.</p>
+        </article>
+      </div>
+
+      <div class="technical-panel reveal" id="especificaciones">
+        <div>
+          <span class="section-kicker">TECHNICAL DATA</span>
+          <h3>Ficha técnica.</h3>
+        </div>
+
+        <div class="technical-list">
+          <div><span>Producto</span><strong>PlayStation 5 Slim</strong></div>
+          <div><span>Almacenamiento</span><strong>1 TB SSD</strong></div>
+          <div><span>Resolución</span><strong>Hasta 4K</strong></div>
+          <div><span>Frecuencia</span><strong>Hasta 120 FPS</strong></div>
+          <div><span>Conectividad</span><strong>Wi-Fi / Bluetooth</strong></div>
+          <div><span>Control</span><strong>DualSense inalámbrico</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCESORIOS -->
+    <section class="section-padding">
+      <div class="section-heading reveal">
+        <div>
+          <span class="section-kicker">03 / ACCESORIOS</span>
+          <h2>Completá tu <span>setup.</span></h2>
+        </div>
+        <p>Encontrá los accesorios ideales para acompañar tu experiencia gaming.</p>
+      </div>
+
+      <div class="products-grid">
+        <article class="product-card reveal">
+          <div class="product-card-image">
+            <img
+              src="https://cetrogar.vtexassets.com/arquivos/ids/156278-1440-auto/Joystick-Sony-PS5-Dualsense-Sterling-Silver.webp?quality=8&v=639137723297300000"
+              alt="Control Sony DualSense"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="product-card-info">
+            <span class="product-category">PLAYSTATION ACCESSORIES</span>
+            <h3>Control DualSense</h3>
+            <div class="product-card-bottom">
+              <strong>$149.999</strong>
+              <button class="small-add add-to-cart"
+                data-name="Control DualSense" data-price="149999"
+                aria-label="Agregar Control DualSense al carrito">+</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card reveal">
+          <div class="product-card-image">
+            <img
+              src="https://i.blogs.es/25be06/auricularesjugonesap/1366_2000.jpg"
+              alt="Auriculares gaming"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="product-card-info">
+            <span class="product-category">GAMING GEAR</span>
+            <h3>Auriculares Gaming</h3>
+            <div class="product-card-bottom">
+              <strong>$89.999</strong>
+              <button class="small-add add-to-cart"
+                data-name="Auriculares Gaming" data-price="89999"
+                aria-label="Agregar Auriculares Gaming al carrito">+</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- OPINIONES -->
+    <section class="reviews-section section-padding" id="opiniones">
+      <div class="section-heading centered reveal">
+        <div>
+          <span class="section-kicker">04 / EXPERIENCIAS</span>
+          <h2>Clientes que <span>confían.</span></h2>
+        </div>
+        <p>La experiencia de compra también forma parte del producto.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <article class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p>"Excelente producto. La calidad de imagen y la velocidad de la consola son increíbles."</p>
+          <div class="review-author">
+            <div class="avatar">MG</div>
+            <div><strong>Martín G.</strong><small>Cliente verificado</small></div>
+          </div>
+        </article>
+
+        <article class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p>"La compra fue muy sencilla y el envío llegó antes de lo esperado. Muy recomendable."</p>
+          <div class="review-author">
+            <div class="avatar">LR</div>
+            <div><strong>Lucía R.</strong><small>Cliente verificada</small></div>
+          </div>
+        </article>
+
+        <article class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p>"Una experiencia excelente. El producto llegó perfectamente y funciona genial."</p>
+          <div class="review-author">
+            <div class="avatar">JP</div>
+            <div><strong>Juan P.</strong><small>Cliente verificado</small></div>
+          </div>
+        </article>
+
+        <article class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p>"Muy buena atención y una gran variedad de productos. Volvería a comprar."</p>
+          <div class="review-author">
+            <div class="avatar">SF</div>
+            <div><strong>Sofía F.</strong><small>Cliente verificada</small></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="final-cta">
+      <div class="cta-glow"></div>
+      <span class="section-kicker">TECH STORE / YOUR NEXT LEVEL</span>
+      <h2>La tecnología no <span>espera.</span></h2>
+      <p>Encontrá tu próximo producto y llevá tu experiencia más lejos.</p>
+      <a href="#productos" class="button button-primary">Explorar productos →</a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contacto">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#inicio" class="logo">TECH<span>STORE.</span></a>
+        <p>Tecnología, innovación y gaming.<br>Todo lo que necesitás en un solo lugar.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Explorar</h4>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#caracteristicas">Tecnología</a>
+        <a href="#opiniones">Opiniones</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Información</h4>
+        <span>Envíos y entregas</span>
+        <span>Medios de pago</span>
+        <span>Garantía</span>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contacto</h4>
+        <span>Buenos Aires, Argentina</span>
+        <span>Atención al cliente</span>
+        <span>Todos los días</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 TECH STORE. Todos los derechos reservados.</span>
+      <span>DESIGNED WITH <span class="footer-blue">✦</span> IN ARGENTINA</span>
+    </div>
+  </footer>
+
+  <!-- CARRITO LATERAL -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras">
+    <div class="cart-header">
+      <div>
+        <span class="section-kicker">YOUR SELECTION</span>
+        <h3>Tu carrito</h3>
+      </div>
+      <button class="close-cart" id="closeCart" aria-label="Cerrar carrito">✕</button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <p class="empty-cart">Tu carrito está vacío.</p>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">$0</strong>
+      </div>
+      <button class="button button-primary checkout-button" id="checkoutButton">
+        Continuar compra →
+      </button>
+      <small>Los precios están expresados en pesos argentinos.</small>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status"></div>
 
 </body>
 </html>
